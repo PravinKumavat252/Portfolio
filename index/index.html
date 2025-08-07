@@ -1,0 +1,1384 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+        <meta name="keywords" content="Document" />
+        <meta name="description" content="Your Description..." />
+        <title>Document</title>
+        <link
+            rel="stylesheet"
+            href="C:\Users\PRAVIN\Desktop\PRAVIN\Web Designing\Portfolio\CSS\swiper-bundle.min.css" />
+        <link
+            rel="stylesheet"
+            href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css" />
+        <link rel="stylesheet" href="C:\Users\PRAVIN\Desktop\PRAVIN\Web Designing\Portfolio\CSS\loader.css" />
+        <link rel="stylesheet" href="C:\Users\PRAVIN\Desktop\PRAVIN\Web Designing\Portfolio\CSS\home.css" />
+        <link rel="stylesheet" href="C:\Users\PRAVIN\Desktop\PRAVIN\Web Designing\Portfolio\CSS\about.css" />
+        <link rel="stylesheet" href="C:\Users\PRAVIN\Desktop\PRAVIN\Web Designing\Portfolio\CSS\services.css" />
+        <link rel="stylesheet" href="C:\Users\PRAVIN\Desktop\PRAVIN\Web Designing\Portfolio\CSS\portfolio.css" />
+        <link rel="stylesheet" href="C:\Users\PRAVIN\Desktop\PRAVIN\Web Designing\Portfolio\CSS\comments.css" />
+        <link rel="stylesheet" href="C:\Users\PRAVIN\Desktop\PRAVIN\Web Designing\Portfolio\CSS\contact.css" />
+        <link rel="stylesheet" href="C:\Users\PRAVIN\Desktop\PRAVIN\Web Designing\Portfolio\CSS\mapbox-gl.css" />
+        <!-- <link href="C:\Users\PRAVIN\Desktop\PRAVIN\Portfolio\CSS\mapbox-gl.css"rel="stylesheet" /> -->
+        <link rel="stylesheet" href="C:\Users\PRAVIN\Desktop\PRAVIN\Web Designing\Portfolio\CSS\style.css" />
+        <link
+            rel="shortcut icon"
+            href="C:/Users/PRAVIN/Desktop/PRAVIN/Web Designing/Portfolio/IMAGE/Pravin.png"
+            type="image/x-icon" />
+    </head>
+     <body onload="loaded()">
+        <div class="loader">
+            <div class="c c1"></div>
+            <div class="c c2"></div>
+            <div class="c c3"></div>
+            <div class="c c4"></div>
+            <div class="c c5"></div>
+            <div class="c c6"></div>
+        </div>
+        <script>
+            let loader = document.querySelector(".loader");
+            function loaded() {
+                loader.classList.add("remove");
+                setTimeout(() => {
+                    loader.style.display = "none";
+                }, 1000);
+            }
+        </script>
+        <!-- HAMBURGER MENU BUTTON (responsively visible) -->
+        <div class="hamburger">
+            <div class="bar1"></div>
+            <div class="bar2"></div>
+            <div class="bar3"></div>
+        </div>
+
+        <!-- THE REAL NAVIGATION -->
+        <nav class="navigation">
+            <h1>
+                Pravin
+                <div></div>
+                <div></div>
+            </h1>
+            <ul>
+                <li><a href="#" onclick="home()">home</a></li>
+                <li>
+                    <a
+                        href="#"
+                        onclick="about(); animate3.play(); animate4.play();"
+                        >about</a
+                    >
+                </li>
+                <li>
+                    <a href="#" onclick="services(); animate6.play();"
+                        >services</a
+                    >
+                </li>
+                <li><a href="#" onclick="portfolio()">portfolio</a></li>
+                <li><a href="#" onclick="comments()">comments</a></li>
+                <li>
+                    <a href="#" onclick="contact(); animate5.play()">contact</a>
+                </li>
+            </ul>
+            <p>
+                &copy; 2024
+                <a
+                    href="https://github.com/PravinKumavat252"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    >Pravin</a
+                >.
+            </p>
+        </nav>
+
+        <div class="container">
+            <div class="layer layer1 active">
+                <div class="home main">
+                    <div class="canvas_container">
+                        <canvas></canvas>
+                    </div>
+                    <div class="content-for-home">
+                        <div class="img-container"></div>
+                        <h1 align="center">Kumavat Pravin S</h1>
+                        <div class="social-icons">
+                            <div class="s-icon">
+                                <a href="#">
+                                    <i class="fab fa-facebook"></i>
+                                </a>
+                                <div class="s-name">Facebook</div>
+                            </div>
+                            <div class="s-icon">
+                                <a href="#">
+                                    <i class="fab fa-twitter"></i>
+                                </a>
+                                <div class="s-name">Tweeter</div>
+                            </div>
+                            <div class="s-icon">
+                                <a href="#">
+                                    <i class="fab fa-github"></i>
+                                </a>
+                                <div class="s-name">GitHub</div>
+                            </div>
+                            <div class="s-icon">
+                                <a href="#">
+                                    <i class="fab fa-codepen"></i>
+                                </a>
+                                <div class="s-name">CodePen</div>
+                            </div>
+                            <div class="s-icon">
+                                <a href="#">
+                                    <i class="fab fa-instagram"></i>
+                                </a>
+                                <div class="s-name">Instagram</div>
+                            </div>
+                            <div class="s-icon">
+                                <a href="#">
+                                    <i class="fas fa-envelope"></i>
+                                </a>
+                                <div class="s-name">Email</div>
+                            </div>
+                        </div>
+
+                        <div class="side-nav">
+                            <button
+                                onclick="about(); animate3.play(); animate4.play();">
+                                <span class="w">W</span>
+                                <span class="tooltip"> why you? </span>
+                            </button>
+                            <button onclick="services(); animate6.play();">
+                                <span class="w">W</span>
+                                <span class="tooltip"> what do you do? </span>
+                            </button>
+                            <button onclick="portfolio()">
+                                <span class="w">W</span>
+                                <span class="tooltip">
+                                    what have you done?
+                                </span>
+                            </button>
+                            <button onclick="comments()">
+                                <span class="w">W</span>
+                                <span class="tooltip"> what others say? </span>
+                            </button>
+                            <button onclick="contact(); animate5.play()">
+                                <span class="w">W</span>
+                                <span class="tooltip"> where are you? </span>
+                            </button>
+                        </div>
+
+                        <div class="titles-for-side-nav">
+                            <span></span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="layer layer2">
+                <div class="about main">
+                    <!-- SEGMENT FOR STYLING. -->
+                    <div class="styling">
+                        <div class="absolute box"></div>
+                        <div class="absolute circle"></div>
+                        <div class="absolute triangle"></div>
+                        <div class="absolute dots">
+                            <div class="dot dot1"></div>
+                            <div class="dot dot2"></div>
+                            <div class="dot dot3"></div>
+                            <div class="dot dot4"></div>
+                            <div class="dot dot5"></div>
+                            <div class="dot dot6"></div>
+                            <div class="dot dot7"></div>
+                            <div class="dot dot8"></div>
+                            <div class="dot dot9"></div>
+                            <div class="dot dot10"></div>
+                            <div class="dot dot11"></div>
+                            <div class="dot dot12"></div>
+                            <div class="dot dot13"></div>
+                            <div class="dot dot14"></div>
+                            <div class="dot dot15"></div>
+                            <div class="dot dot16"></div>
+                            <div class="dot dot17"></div>
+                            <div class="dot dot18"></div>
+                            <div class="dot dot19"></div>
+                            <div class="dot dot20"></div>
+                            <div class="dot dot21"></div>
+                            <div class="dot dot22"></div>
+                            <div class="dot dot23"></div>
+                            <div class="dot dot24"></div>
+                        </div>
+
+                        <svg
+                            class="wave absolute"
+                            xmlns="http://www.w3.org/2000/svg"
+                            viewBox="0 0 1450 320">
+                            <path
+                                fill-opacity="1"
+                                d="M0,320L48,277.3C96,235,192,149,288,122.7C384,96,480,128,576,165.3C672,203,768,245,864,234.7C960,224,1056,160,1152,112C1248,64,1344,32,1392,16L1440,0L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z"></path>
+                        </svg>
+
+                        <svg
+                            class="wave absolute opposite"
+                            xmlns="http://www.w3.org/2000/svg"
+                            viewBox="0 0 1450 320">
+                            <path
+                                fill-opacity="1"
+                                d="M0,224L48,213.3C96,203,192,181,288,192C384,203,480,245,576,218.7C672,192,768,96,864,64C960,32,1056,64,1152,101.3C1248,139,1344,181,1392,202.7L1440,224L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z"></path>
+                        </svg>
+                    </div>
+
+                    <!-- REAL CONTENT -->
+                    <div class="wrapper">
+                        <div class="face face1">
+                            <div class="content">
+                                <p>Hello,</p>
+                                <h1>I'm Pravin</h1>
+                                <p class="text">
+                                    Pravin is a skilled data analyst who excels at turning complex
+                                     data into clear, actionable insights. With a passion for uncovering 
+                                     patterns, Pravin helps businesses make smarter, data - driven decisions.
+                                </p>
+                                <a
+                                    class="button download"
+                                    href="C:/Users/PRAVIN/Desktop/PRAVIN/Web Designing/Portfolio/IMAGE/resume_cropped.pdf"
+                                    download="shuvro_cv"
+                                    >Download CV</a
+                                >
+                                <a
+                                    class="button hire"
+                                    href="#"
+                                    class="hire"
+                                    onclick="contact(); animate5.play()"
+                                    >Hire Me.</a
+                                >
+                            </div>
+                        </div>
+                        <div class="face face2"></div>
+                    </div>
+
+                    <!-- THE NAVIGATION OF ABOUT -->
+                    <nav class="about_nav">
+                        <ul>
+                            <li>
+                                <a class="active" href="#" data-text="one"
+                                    >Skills</a
+                                >
+                            </li>
+                            <li>
+                                <a href="#" data-text="two">Knowledge</a>
+                            </li>
+                            <li>
+                                <a href="#" data-text="three">Education</a>
+                            </li>
+                        </ul>
+                    </nav>
+
+                    <div class="about_container">
+                        <!-- SKILL BOX -->
+                        <div class="skills">
+                            <div class="skill">
+                                <div class="name">Data Analyst</div>
+                                <div class="value" style="left: 90%">90%</div>
+                                <div class="percent">
+                                    <div
+                                        class="progress"
+                                        style="width: 90%"></div>
+                                </div>
+                            </div>
+                            <div class="skill">
+                                <div class="name">Machine Learning</div>
+                                <div class="value" style="left: 80%">80%</div>
+                                <div class="percent">
+                                    <div
+                                        class="progress"
+                                        style="width: 80%"></div>
+                                </div>
+                            </div>
+                            <div class="skill">
+                                <div class="name">Python</div>
+                                <div class="value" style="left: 75%">75%</div>
+                                <div class="percent">
+                                    <div
+                                        class="progress"
+                                        style="width: 75%"></div>
+                                </div>
+                            </div>
+                            <div class="skill">
+                                <div class="name">Deep Learning</div>
+                                <div class="value" style="left: 70%">70%</div>
+                                <div class="percent">
+                                    <div
+                                        class="progress"
+                                        style="width: 70%"></div>
+                                </div>
+                            </div>
+                            <div class="skill">
+                                <div class="name">HTML</div>
+                                <div class="value" style="left: 60%">60%</div>
+                                <div class="percent">
+                                    <div
+                                        class="progress"
+                                        style="width: 60%"></div>
+                                </div>
+                            </div>
+                            <div class="skill">
+                                <div class="name">CSS</div>
+                                <div class="value" style="left: 60%">60%</div>
+                                <div class="percent">
+                                    <div
+                                        class="progress"
+                                        style="width: 60%"></div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- EXPERIENCE -->
+                        <div class="experience">
+                            <div class="middle_line"></div>
+                            <div class="cover">
+                                <i class="job_box fas fa-briefcase"></i>
+                                <i class="date">2023 - Present</i>
+                                <h2>Web Designing</h2>
+                                <i class="name_company">Monark University</i>
+                                <article class="text_hidden">
+                                    Web designing is the process of creating the layout and 
+                                    appearance of websites. It involves using colors, fonts, images, 
+                                    and graphics to make a site visually appealing and user-friendly. 
+                                    A good web design ensures that visitors can easily navigate the site 
+                                    and find the information they need. It combines creativity with technical 
+                                    skills to create an effective online presence for businesses and individuals.
+                                </article>
+                            </div>
+                            <div class="whitespace"></div>
+                            <div class="whitespace"></div>
+                            <div class="cover">
+                                <i class="job_box fas fa-briefcase"></i>
+                                <i class="date">2023 - Present</i>
+                                <h2>Data Analyst</h2>
+                                <i class="name_company">Monark University</i>
+                                <article class="text_hidden">
+                                    A data analyst is a person who collects, organizes, and studies data to 
+                                    help companies make better decisions. They use tools like Excel, Python, and 
+                                    SQL to find patterns and trends. Their job is to turn raw data into useful information. 
+                                    This helps businesses solve problems and plan for the future.
+                                </article>
+                            </div>
+                            <div class="cover">
+                                <i class="job_box fas fa-briefcase"></i>
+                                <i class="date">2024 - Present</i>
+                                <h2>Machine Learning</h2>
+                                <i class="name_company">Monark University</i>
+                                <article class="text_hidden">
+                                    Machine learning is a way for computers to learn from data and make decisions without 
+                                    being programmed step by step. It finds patterns in data to make predictions or solve 
+                                    problems. This technology is used in things like voice assistants, recommendations, 
+                                    and spam filters.
+                                </article>
+                            </div>
+                            <div class="whitespace"></div>
+                            <div class="whitespace"></div>
+                            <div class="cover">
+                                <i class="job_box fas fa-briefcase"></i>
+                                <i class="date">2025 - Present</i>
+                                <h2>Deep Learning</h2>
+                                <i class="name_company">Monark University</i>
+                                <article class="text_hidden">
+                                    Deep learning is a part of machine learning that uses brain-like structures called 
+                                    neural networks to learn from large amounts of data. It helps computers understand 
+                                    complex things like images, speech, and language. Deep learning is used in self-driving 
+                                    cars, face recognition, and smart assistants.
+                                </article>
+                            </div>
+                            <div class="whitespace"></div>
+                            <div class="whitespace"></div>
+                            <div class="cover">
+                                <i class="job_box fas fa-briefcase"></i>
+                                <i class="date">2025 - Present</i>
+                                <h2>Artificial Intelligence</h2>
+                                <i class="name_company">Monark University</i>
+                                <article class="text_hidden">
+                                    Artificial Intelligence (AI) is a technology that allows machines to think, learn, and 
+                                    make decisions like humans. It uses data and smart programs to solve problems, understand 
+                                    speech, and recognize images. AI is used in many areas like smartphones, robots, self-driving 
+                                    cars, and chatbots. It helps make tasks faster and easier.
+                                </article>
+                            </div>
+                        </div>
+                        <div class="education">
+                            <div class="middle_line"></div>
+                            <div class="cover">
+                                <i class="job_box fas fa-book-reader"></i>
+                                <i class="date">2023-Present</i>
+                                <h2>B.C.A</h2>
+                                <i class="name_company">Monark University</i>
+                                <article class="text_hidden">
+                                     I am currently studying for my BCA
+                                      at Monark University. This program is helping me develop my skills in 
+                                      technology and problem-solving, and I am excited to learn more and explore 
+                                      new opportunities in the field.
+                                </article>
+                            </div>
+                            <div class="whitespace"></div>
+                            <div class="whitespace"></div>
+                            <div class="cover">
+                                <i class="job_box fas fa-book-reader"></i>
+                                <i class="date">MAR-2023</i>
+                                <h2>12th</h2>
+                                <i class="name_company">Commerce</i>
+                                <article class="text_hidden">
+                                     I completed my 12th grade at Central Public English School with a percentile of 63.21. 
+                                     I finished my studies after the lockdown, which allowed me to adapt to new 
+                                     learning methods.
+                                </article>
+                            </div>
+                            <div class="cover">
+                                <i class="job_box fas fa-book-open"></i>
+                                <i class="date">MAY-2021</i>
+                                <h2>10th</h2>
+                                <i class="name_company">Central Public English School</i>
+                                <article class="text_hidden">
+                                     I finished my 10th grade at Central Public English School with a percentile of 59.20.
+                                      During the lockdown, I learned to manage my time well and study independently 
+                                      through online classes.
+                                </article>
+                            </div>
+                            
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="layer layer3">
+                <div class="services main">
+                    <!-- <section class="background">
+                        <div class="bg_wrapper"></div>
+                    </section> -->
+                    <div class="hero">
+                        <span class="typography">
+                            <span class="t_dummy">We know how to</span> <br />
+                            <span class="t-box">
+                                <span class="box-side box-front"
+                                    >Web Designing</span
+                                >
+                                <span class="box-side box-top"
+                                    >Machine Learning</span
+                                >
+                                <span class="box-side box-back"
+                                    >Deep Learning</span
+                                >
+                                <span class="box-side box-bottom"
+                                    >Artificial Intelligence</span
+                                >
+                            </span>
+                        </span>
+                        <p class="hero-text">
+                            Pravin is a skilled data analyst who excels at turning complex 
+                            data into clear, actionable insights. With a passion for uncovering 
+                            patterns, Pravin helps businesses make smarter, data-driven decisions.
+                        </p>
+                    </div>
+                    <div class="capabilities left move-little-down">
+                        <img src="C:/Users/PRAVIN/Desktop/PRAVIN/Web Designing/Portfolio/IMAGE/web_design.png" alt="" />
+                        <p class="c_content">
+                            <span class="c_title">Web Design</span>
+                            Web designing focuses on creating visually appealing, user-friendly websites through 
+                            layout, colors, and typography. It ensures responsive design for seamless access across 
+                            devices. Key tools include HTML, CSS, JavaScript, and UI/UX software like Figma. The goal
+                             is to blend aesthetics with functionality for an engaging experience. 
+                            <br />
+                            <a href="#">Learn More</a>
+                            <i class="far fa-arrow-alt-circle-right"></i>
+                        </p>
+                    </div>
+                    <div class="capabilities right">
+                        <p class="c_content">
+                            <span class="c_title">Visualization</span>
+                            Using tools like Tableau, Power BI, and Python's Matplotlib and Seaborn, 
+                            I create interactive dashboards and visually compelling charts that communicate 
+                            complex data in a simple, digestible format. These visualizations help stakeholders 
+                            easily interpret the data, track key performance indicators (KPIs), and make informed decisions.
+                            <br />
+                            <a href="#">Learn More</a>
+                            <i class="far fa-arrow-alt-circle-right"></i>
+                        </p>
+                        <img
+                            src="C:/Users/PRAVIN/Desktop/PRAVIN/Web Designing/Portfolio/IMAGE/Data Analyst.png"
+                            alt="" />
+                    </div>
+                    <div class="capabilities left">
+                        <img
+                            src="C:/Users/PRAVIN/Desktop/PRAVIN/Web Designing/Portfolio/IMAGE/Machine Learning.png"
+                            alt=""
+                            style="
+                                background: #2929292f;
+                                backdrop-filter: blur(4px);
+                                border-radius: 40px;
+                            " />
+                        <p class="c_content">
+                            <span class="c_title">MachineLearning</span>
+                            I apply statistical and machine learning techniques, such as regression 
+                            analysis, clustering, and classification, to build predictive models. 
+                            These models are designed to forecast future outcomes—like customer 
+                            behavior, sales trends, or operational efficiency—enabling businesses 
+                            to make proactive decisions based on data-driven insights.
+                            <br />
+                            <a href="#">Learn More</a>
+                            <i class="far fa-arrow-alt-circle-right"></i>
+                        </p>
+                    </div>
+
+                    <div class="capabilities right">
+                        <p class="c_content">
+                            <span class="c_title">DeepLearning</span>
+                            Using tools like Tableau, Power BI, and Python's Matplotlib and Seaborn, 
+                            I create interactive dashboards and visually compelling charts that communicate 
+                            complex data in a simple, digestible format. These visualizations help stakeholders 
+                            easily interpret the data, track key performance indicators (KPIs), and make informed decisions.
+                            <br />
+                            <a href="#">Learn More</a>
+                            <i class="far fa-arrow-alt-circle-right"></i>
+                        </p>
+                        <img
+                            src="C:/Users/PRAVIN/Desktop/PRAVIN/Web Designing/Portfolio/IMAGE/Deep Learning.png"
+                            alt="" />
+                    </div>
+
+                    <div class="capabilities left">
+                        <img
+                            src="C:/Users/PRAVIN/Desktop/PRAVIN/Web Designing/Portfolio/IMAGE/AI.png"
+                            alt=""
+                            style="
+                                background: #2929292f;
+                                backdrop-filter: blur(4px);
+                                border-radius: 40px;
+                            " />
+                        <p class="c_content">
+                            <span class="c_title">AI</span>
+                            AI enables machines to simulate human intelligence,
+                             learning from data to perform tasks like decision-making and problem-solving. 
+                             It includes technologies like machine learning, neural networks, and NLP for automation 
+                             and predictions. AI powers applications like chatbots, self-driving cars, and personalized
+                              recommendations. Its goal is to enhance efficiency, accuracy, and innovation
+                               across industries.
+                            <br />
+                            <a href="#">Learn More</a>
+                            <i class="far fa-arrow-alt-circle-right"></i>
+                        </p>
+                    </div>
+
+
+                    <div class="foot">
+                        <h2>Works:</h2>
+                        <div class="foot-link">
+                            <a href="#" onclick="portfolio()">Web Designing</a>
+                            <i class="far fa-arrow-alt-circle-right"></i>
+                            <!-- <img
+                                src="C:/Users/PRAVIN/Desktop/PRAVIN/Portfolio/IMAGE/web_design.jpg"
+                                alt="portfolio" /> -->
+                        </div>
+                        <div class="foot-link">
+                            <a href="#" onclick="portfolio()">Visualization</a>
+                            <i class="far fa-arrow-alt-circle-right"></i>
+                            <!-- <img
+                                src="C:/Users/PRAVIN/Desktop/PRAVIN/Portfolio/IMAGE/Data Analyst.png"
+                                alt="portfolio" /> -->
+                        </div>
+                        <div class="foot-link">
+                            <a href="#" onclick="portfolio()">Machine Learning</a>
+                            <i class="far fa-arrow-alt-circle-right"></i>
+                            <!-- <img
+                                src="C:/Users/PRAVIN/Desktop/PRAVIN/Portfolio/IMAGE/Machine Learning.png"
+                                alt="portfolio" /> -->
+                        </div>
+                        <div class="foot-link">
+                            <a href="#" onclick="portfolio()">Deep Learning</a>
+                            <i class="far fa-arrow-alt-circle-right"></i>
+                            <!-- <img
+                                src="C:/Users/PRAVIN/Desktop/PRAVIN/Portfolio/IMAGE/Deep Learning.png"
+                                alt="portfolio" /> -->
+                        </div>
+                        <div class="foot-link">
+                            <a href="#" onclick="portfolio()">Artificial Intelligence</a>
+                            <i class="far fa-arrow-alt-circle-right"></i>
+                            <!-- <img
+                                src="C:/Users/PRAVIN/Desktop/PRAVIN/Portfolio/IMAGE/AI.png"
+                                alt="portfolio" /> -->
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="layer layer4">
+                <div class="portfolio main">
+                    <div class="tip main">
+                        <div class="allContent">
+                            <div class="description" style="display: none">
+                                <div class="pro_intro">
+                                    <div class="nameplate">
+                                        <h1>Wedding Couple</h1>
+                                        <span
+                                            >Category:
+                                            <span style="color: #999"
+                                                >Web Design</span
+                                            ></span
+                                        >
+                                    </div>
+                                    <div class="other_text">
+                                        <h2>Project Brief:</h2>
+                                        <p
+                                            class="pro_brief"
+                                            style="
+                                                color: #999;
+                                                padding-left: 15px;
+                                            ">
+                                            Lorem ipsum, dolor sit amet
+                                            consectetur adipisicing elit. At
+                                            corrupti modi perferendis iure
+                                            corporis dolores minus asperiores
+                                            nemo debitis veritatis id placeat,
+                                            similique eum recusandae ipsa quia
+                                            cum earum nam?
+                                        </p>
+                                    </div>
+                                </div>
+                                <div class="pro_info">
+                                    <h2>Project Info</h2>
+                                    <p class="Date">
+                                        <b>Date: </b>
+                                        <span style="color: #999">2020</span>
+                                    </p>
+                                    <p class="client">
+                                        <b>Client: </b>
+                                        <span style="color: #999">xyz</span>
+                                    </p>
+                                    <p class="tools">
+                                        <b>Tools: </b>
+                                        <span style="color: #999">HTML, CSS, JavaScript</span>
+                                    </p>
+                                    <p class="link">
+                                        <b>Web: </b>
+                                        <span style="color: #999"
+                                            ><a href="#"
+                                                >www.domain.com</a
+                                            ></span
+                                        >
+                                    </p>
+                                </div>
+                            </div>
+
+                            <button class="closeButton">
+                                <span>Project Details</span>
+                                <div class="icon"></div>
+                            </button>
+                            <button class="exitButton">&times;</button>
+
+                            <div class="port_content">
+                                <div class="swiper-container-2">
+                                    <div class="swiper-wrapper">
+                                        <div class="swiper-slide">
+                                            <img src="#" alt="web design" />
+                                        </div>
+                                        <div class="swiper-slide">
+                                            <img src="#" alt="web design" />
+                                        </div>
+                                        <div class="swiper-slide">
+                                            <img src="#" alt="web design" />
+                                        </div>
+                                        <div class="swiper-slide">
+                                            <img src="#" alt="web design" />
+                                        </div>
+                                        <div class="swiper-slide">
+                                            <img src="#" alt="web design" />
+                                        </div>
+                                        <div class="swiper-slide">
+                                            <img src="#" alt="web design" />
+                                        </div>
+                                        <div class="swiper-slide">
+                                            <img src="#" alt="web design" />
+                                        </div>
+                                        <div class="swiper-slide">
+                                            <img src="#" alt="web design" />
+                                        </div>
+                                        <div class="swiper-slide">
+                                            <img src="#" alt="web design" />
+                                        </div>
+                                    </div>
+                                    <!-- Add Pagination -->
+                                    <div class="swiper-scrollbar"></div>
+                                    <!-- Add Arrows -->
+                                    <div class="swiper-button-next"></div>
+                                    <div class="swiper-button-prev"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <nav class="about_nav padding_top">
+                        <ul>
+                            <li>
+                                <a
+                                    class="filter active"
+                                    href="#"
+                                    data-filter="all"
+                                    >All</a
+                                >
+                            </li>
+                            <li>
+                                <a class="filter" href="#" data-filter=".web"
+                                    >Web Design</a
+                                >
+                            </li>
+                            <li>
+                                <a class="filter" href="#" data-filter=".logo"
+                                    >Visualize</a
+                                >
+                            </li>
+                            <li>
+                                <a class="filter" href="#" data-filter=".card"
+                                    >MachineLearning</a
+                                >
+                            </li>
+                            <li>
+                                <a class="filter" href="#" data-filter=".app"
+                                    >DeepLearning</a
+                                >
+                            </li>
+                            <!-- <li>
+                                <a class="filter" href="#" data-filter=".icon"
+                                    >AI</a
+                                >
+                            </li> -->
+                        </ul>
+                    </nav>
+                    <div class="mymixcont">
+                        <div class="mix web">
+                            <img
+                                src="C:/Users/PRAVIN/Desktop/PRAVIN/Web Designing/Portfolio/IMAGE/PERPOSE.png"
+                                alt="" />
+                             <span class="title">Perpose Website</span>
+                             <span class="port_link">View Project</span>
+                        </div>
+                        <!-- <div class="mix icon">
+                            <img
+                                src="/resources/img/portfolios/icon/5.jpg"
+                                alt="" />
+                            <span class="title">Water World</span>
+                            <span class="port_link">View Project</span>
+                        </div> -->
+                        <div class="mix card">
+                            <img
+                                src="C:/Users/PRAVIN/Desktop/PRAVIN/Web Designing/Portfolio/IMAGE/amazon.png"
+                                alt="" />
+                            <span class="title">Amazon Stock Price Prediction</span>
+                            <span class="port_link">View Project</span>
+                        </div>
+                        <div class="mix web">
+                            <img
+                                src="C:/Users/PRAVIN/Desktop/PRAVIN/Web Designing/Portfolio/IMAGE/PALM.png"
+                                alt="" />
+                            <span class="title">Palm Website</span>
+                            <span class="port_link">View Project</span>
+                        </div>
+                        <div class="mix app">
+                            <img
+                                src="C:/Users/PRAVIN/Desktop/PRAVIN/Web Designing/Portfolio/IMAGE/handwriting.jpg"
+                                alt="" />
+                            <span class="title">Handwriting Recognition</span>
+                            <span class="port_link">View Project</span>
+                        </div>
+                        <div class="mix card">
+                            <img
+                                src="C:/Users/PRAVIN/Desktop/PRAVIN/Web Designing/Portfolio/IMAGE/loan.jpg"
+                                alt="" />
+                            <span class="title">Loan Prediction</span>
+                            <span class="port_link">View Project</span>
+                        </div>
+                        <!-- <div class="mix web">
+                            <img
+                                src="/resources/img/portfolios/web/3.jpg"
+                                alt="" />
+                            <span class="title">Web App Pro</span>
+                            <span class="port_link">View Project</span>
+                        </div>
+                        <div class="mix card">
+                            <img
+                                src="/resources/img/portfolios/card/3.jpg"
+                                alt="" />
+                            <span class="title">Reauty</span>
+                            <span class="port_link">View Project</span>
+                        </div>
+                        <div class="mix web">
+                            <img
+                                src="/resources/img/portfolios/web/4.jpg"
+                                alt="" />
+                            <span class="title">Sonor Design</span>
+                            <span class="port_link">View Project</span>
+                        </div>
+                        <div class="mix card">
+                            <img
+                                src="/resources/img/portfolios/card/4.jpg"
+                                alt="" />
+                            <span class="title">Richard Tan</span>
+                            <span class="port_link">View Project</span>
+                        </div> -->
+                        <div class="mix logo">
+                            <img
+                                src="C:/Users/PRAVIN/Desktop/PRAVIN/Web Designing/Portfolio/IMAGE/suicide rate.jpg"
+                                alt="" />
+                            <span class="title">Suicide Rate</span>
+                            <span class="port_link">View Project</span>
+                        </div>
+                        <!-- <div class="mix icon">
+                            <img
+                                src="C:/Users/PRAVIN/Desktop/PRAVIN/Portfolio/IMAGE/AI.png"
+                                alt="" />
+                            <span class="title">Domine</span>
+                            <span class="port_link">View Project</span>
+                        </div> -->
+                        <!-- <div class="mix app">
+                            <img
+                                src="/resources/img/portfolios/app/2.jpg"
+                                alt="" />
+                            <span class="title">Profile World</span>
+                            <span class="port_link">View Project</span>
+                        </div> -->
+                        <div class="mix card">
+                            <img
+                                src="C:/Users/PRAVIN/Desktop/PRAVIN/Web Designing/Portfolio/IMAGE/heart (2).png"
+                                alt="" />
+                            <span class="title">Heart Disease Prediction</span>
+                            <span class="port_link">View Project</span>
+                        </div>
+
+                        <div class="mix card">
+                            <img
+                                src="C:/Users/PRAVIN/Desktop/PRAVIN/Web Designing/Portfolio/IMAGE/titanic.png"
+                                alt="" />
+                            <span class="title">Titanic-Survival Rate Prediction</span>
+                            <span class="port_link">View Project</span>
+                        </div>
+
+                        <div class="mix card">
+                            <img
+                                src="C:/Users/PRAVIN/Desktop/PRAVIN/Web Designing/Portfolio/IMAGE/diamond.png"
+                                alt="" />
+                            <span class="title">Diamond</span>
+                            <span class="port_link">View Project</span>
+                        </div>
+
+
+                        <div class="mix logo">
+                            <img
+                                src="C:/Users/PRAVIN/Desktop/PRAVIN/Web Designing/Portfolio/IMAGE/suicide.png"
+                                alt="" />
+                            <span class="title">Suicide Analysis</span>
+                            <span class="port_link">View Project</span>
+                        </div>
+                        <!-- <div class="mix card">
+                            <img
+                                src="/resources/img/portfolios/card/5.jpg"
+                                alt="" />
+                            <span class="title">Sriram Mohan</span>
+                            <span class="port_link">View Project</span>
+                        </div>
+                        <div class="mix logo">
+                            <img
+                                src="/resources/img/portfolios/logo/4.jpg"
+                                alt="" />
+                            <span class="title">Book Worm</span>
+                            <span class="port_link">View Project</span>
+                        </div>
+                        <div class="mix icon">
+                            <img
+                                src="/resources/img/portfolios/icon/2.jpg"
+                                alt="" />
+                            <span class="title">Football FC</span>
+                            <span class="port_link">View Project</span>
+                        </div>
+                        <div class="mix logo">
+                            <img
+                                src="/resources/img/portfolios/logo/5.jpg"
+                                alt="" />
+                            <span class="title">Free Notes</span>
+                            <span class="port_link">View Project</span>
+                        </div>
+                        <div class="mix icon">
+                            <img
+                                src="/resources/img/portfolios/icon/1.jpg"
+                                alt="" />
+                            <span class="title">Insta Genre</span>
+                            <span class="port_link">View Project</span>
+                        </div>
+                        <div class="mix logo">
+                            <img
+                                src="/resources/img/portfolios/logo/6.jpg"
+                                alt="" />
+                            <span class="title">Movie Sock</span>
+                            <span class="port_link">View Project</span>
+                        </div>
+                        <div class="mix logo">
+                            <img
+                                src="/resources/img/portfolios/logo/7.jpg"
+                                alt="" />
+                            <span class="title">Village Community Church</span>
+                            <span class="port_link">View Project</span>
+                        </div>
+                        <div class="mix app">
+                            <img
+                                src="/resources/img/portfolios/app/3.jpg"
+                                alt="" />
+                            <span class="title">Weathery</span>
+                            <span class="port_link">View Project</span>
+                        </div>
+                        <div class="mix icon">
+                            <img
+                                src="/resources/img/portfolios/icon/3.jpg"
+                                alt="" />
+                            <span class="title">Fav Shop</span>
+                            <span class="port_link">View Project</span>
+                        </div> -->
+                    </div>
+                </div>
+            </div>
+            <div class="layer layer5">
+                <div class="testimonial">
+                    <h1>
+                        <span>See What My Clients Say about Me.</span>
+                    </h1>
+                    <div class="swiper-container">
+                        <div class="swiper-wrapper">
+                            <div class="swiper-slide">
+                                <img src="C:/Users/PRAVIN/Desktop/PRAVIN/Web Designing/Portfolio/IMAGE/favicon.ico" alt="" />
+                                <h4>Indradev Sharma</h4>
+                                <div class="rating">
+                                    <label>&starf;</label>
+                                    <label>&starf;</label>
+                                    <label>&starf;</label>
+                                    <label>&starf;</label>
+                                    <label>&starf;</label>
+                                </div>
+                                <p>
+                                    <span>&ldquo;</span>
+                                    Pravin is a skilled data analyst who excels at turning complex 
+                                    data into clear, actionable insights. With a passion for uncovering
+                                    patterns, Pravin helps businesses make smarter, data-driven decisions.
+                                </p>
+                            </div>
+                            <div class="swiper-slide">
+                                <img src="C:/Users/PRAVIN/Desktop/PRAVIN/Web Designing/Portfolio/IMAGE/favicon.ico" alt="" />
+                                <h4>Ansari Sumaiya</h4>
+                                <div class="rating">
+                                    <label>&starf;</label>
+                                    <label>&starf;</label>
+                                    <label>&starf;</label>
+                                    <label>&starf;</label>
+                                    <label>&starf;</label>
+                                </div>
+                                <p>
+                                    <span>&ldquo;</span>
+                                    Pravin is a skilled data analyst who excels at turning complex 
+                                    data into clear, actionable insights. With a passion for uncovering
+                                    patterns, Pravin helps businesses make smarter, data-driven decisions.
+                                </p>
+                            </div>
+                            <div class="swiper-slide">
+                                <img src="C:/Users/PRAVIN/Desktop/PRAVIN/Web Designing/Portfolio/IMAGE/favicon.ico" alt="" />
+                                <h4>Om Sighn</h4>
+                                <div class="rating">
+                                    <label>&starf;</label>
+                                    <label>&starf;</label>
+                                    <label>&starf;</label>
+                                    <label>&starf;</label>
+                                    <label>&starf;</label>
+                                </div>
+                                <p>
+                                    <span>&ldquo;</span>
+                                    Pravin is a skilled data analyst who excels at turning complex 
+                                    data into clear, actionable insights. With a passion for uncovering
+                                    patterns, Pravin helps businesses make smarter, data-driven decisions.
+                                </p>
+                            </div>
+                            <div class="swiper-slide">
+                                <img src="C:/Users/PRAVIN/Desktop/PRAVIN/Web Designing/Portfolio/IMAGE/favicon.ico" alt="" />
+                                <h4>Ansari Zafar</h4>
+                                <div class="rating">
+                                    <label>&starf;</label>
+                                    <label>&starf;</label>
+                                    <label>&starf;</label>
+                                    <label>&starf;</label>
+                                    <label>&starf;</label>
+                                </div>
+                                <p>
+                                    <span>&ldquo;</span>
+                                    Pravin is a skilled data analyst who excels at turning complex 
+                                    data into clear, actionable insights. With a passion for uncovering
+                                    patterns, Pravin helps businesses make smarter, data-driven decisions.
+                                </p>
+                            </div>
+                            <div class="swiper-slide">
+                                <img src="C:/Users/PRAVIN/Desktop/PRAVIN/Web Designing/Portfolio/IMAGE/favicon.ico" alt="" />
+                                <h4>Abhishek</h4>
+                                <div class="rating">
+                                    <label>&starf;</label>
+                                    <label>&starf;</label>
+                                    <label>&starf;</label>
+                                    <label>&starf;</label>
+                                    <label>&starf;</label>
+                                </div>
+                                <p>
+                                    <span>&ldquo;</span>
+                                    Pravin is a skilled data analyst who excels at turning complex 
+                                    data into clear, actionable insights. With a passion for uncovering
+                                    patterns, Pravin helps businesses make smarter, data-driven decisions.
+                                </p>
+                            </div>
+                            <div class="swiper-slide">
+                                <img src="C:/Users/PRAVIN/Desktop/PRAVIN/Web Designing/Portfolio/IMAGE/favicon.ico" alt="" />
+                                <h4>Surbhi</h4>
+                                <div class="rating">
+                                    <label>&starf;</label>
+                                    <label>&starf;</label>
+                                    <label>&starf;</label>
+                                    <label>&starf;</label>
+                                    <label>&starf;</label>
+                                </div>
+                                <p>
+                                    <span>&ldquo;</span>
+                                    Pravin is a skilled data analyst who excels at turning complex 
+                                    data into clear, actionable insights. With a passion for uncovering
+                                    patterns, Pravin helps businesses make smarter, data-driven decisions.
+                                </p>
+                            </div>
+                        </div>
+                        <!-- Add Pagination -->
+                        <div class="swiper-pagination"></div>
+                        <div class="swiper-button-next"></div>
+                        <div class="swiper-button-prev"></div>
+                    </div>
+                </div>
+            </div>
+            <div class="layer layer6">
+                <div class="contact_us">
+                    <div id="map"></div>
+                    <address class="info_container">
+                        <div class="info info1">
+                            <i class="fas fa-phone-alt"></i>
+                            <span class="iname">Phone</span>
+                            <a href="tel:+8800000000000">+91 8347013745</a>
+                        </div>
+                        <div class="info info2">
+                            <i class="fas fa-home"></i>
+                            <span class="iname">Address</span>
+                            <a
+                                href="https://www.google.com/maps/place/Sherpur+Town+Hall/@25.0136644,90.0140045,355m/data=!3m1!1e3!4m5!3m4!1s0x3757d6136d793499:0x8c22620664dc6a37!8m2!3d25.0156371!4d90.0168872">
+                                <h3></h3>National Handloom,<br>
+                                <span>Viratnagar Road, Nikol</span><br />
+                                <span>Ahmdabad</span>
+                            </a>
+                        </div>
+                        <div class="info info3">
+                            <i class="fas fa-envelope"></i>
+                            <span class="iname">Email</span>
+                            <a href="mailto:email1.gmail.com"
+                                >kmwtpk95@gmail.com</a
+                            >
+                        </div>
+                    </address>
+
+                    <form action="#" method="post">
+                        <h1>Get In Touch</h1>
+                        <div class="inp_field">
+                            <i class="fas fa-user"></i>
+                            <input
+                                type="text"
+                                name="name"
+                                class="fname"
+                                id="fname"
+                                placeholder="Full Name"
+                                required />
+                        </div>
+                        <div class="inp_field">
+                            <i class="fas fa-envelope"></i>
+                            <input
+                                type="email"
+                                name="email"
+                                class="email"
+                                id="email"
+                                placeholder="Email"
+                                required />
+                        </div>
+                        <div class="inp_field">
+                            <i class="fas fa-angle-double-right"></i>
+                            <input
+                                type="text"
+                                name="subject"
+                                class="subject"
+                                id="subject"
+                                placeholder="Subject"
+                                required />
+                        </div>
+                        <textarea
+                            name="message"
+                            cols="30"
+                            rows="5"
+                            class="message"
+                            id="message"
+                            placeholder="Message"
+                            required></textarea>
+                        <button class="submit" id="submit">Submit</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+
+        <!-----------------JQUERY {https://jquery.com/} [USED IN portfolio.js]----------------->
+        <script src="C:\Users\PRAVIN\Desktop\PRAVIN\Web Designing\Portfolio\JS\jquery.min.js"></script>
+        <!-----------------MIX IT UP {https://www.kunkalabs.com/mixitup/} [USED IN portfolio.js]----------------->
+        <script src="C:\Users\PRAVIN\Desktop\PRAVIN\Web Designing\Portfolio\JS\mixitup.min.js"></script>
+        <!-----------------SWIPER JS {https://swiperjs.com/} [USED IN portfolio.js, comments.js]----------------->
+        <script src="C:\Users\PRAVIN\Desktop\PRAVIN\Web Designing\Portfolio\JS\swiper-bundle.min.js"></script>
+        <!-----------------MAPBOX GL {https://www.mapbox.com/} [USED IN contact.js]----------------->
+        <!-- <script src="C:\Users\PRAVIN\Desktop\PRAVIN\Web Designing\Portfolio\JS\mapbox-gl.js"></script> -->
+        <!-----------------EMAIL JS {https://www.emailjs.com/} [USED IN contact.js]----------------->
+        <script src="C:\Users\PRAVIN\Desktop\PRAVIN\Web Designing\Portfolio\JS\email.min.js"></script>
+        <!-----------------ADDITIONAL SCRIPT FOR EMAIL JS----------------->
+        <!-----------------VANILLA TILT JS {https://micku7zu.github.io/vanilla-tilt.js/}----------------->
+        <script src="C:\Users\PRAVIN\Desktop\PRAVIN\Web Designing\Portfolio\JS\vanilla-tilt.min.js"></script>
+        <!-----------------ANIME JS {https://animejs.com/} [USED LOCALLY.]----------------->
+        <script src="C:\Users\PRAVIN\Desktop\PRAVIN\Web Designing\Portfolio\JS\anime.min.js"></script>
+        <!-----------------LOCAL (HOME)----------------->
+        <script src="C:\Users\PRAVIN\Desktop\PRAVIN\Web Designing\Portfolio\JS\home.js"></script>
+        <!-----------------LOCAL (ABOUT)----------------->
+        <script src="C:\Users\PRAVIN\Desktop\PRAVIN\Web Designing\Portfolio\JS\about.js"></script>
+        <!-----------------LOCAL (SERVICES)----------------->
+        <script src="C:\Users\PRAVIN\Desktop\PRAVIN\Web Designing\Portfolio\JS\services.js"></script>
+        <!-----------------LOCAL (PORTFOLIO)----------------->
+        <script src="C:\Users\PRAVIN\Desktop\PRAVIN\Web Designing\Portfolio\JS\portfolio.js"></script>
+        <!-----------------LOCAL (COMMENTS)----------------->
+        <script src="C:\Users\PRAVIN\Desktop\PRAVIN\Web Designing\Portfolio\JS\comments.js"></script>
+        <!-----------------LOCAL (MAIN FILE)----------------->
+        <script src="C:\Users\PRAVIN\Desktop\PRAVIN\Web Designing\Portfolio\JS\main.js"></script>
+/resources/js/c
+        <!-----------------CONTACT LOGIC-------------------------->
+        <script type="module">
+            // The 'building' layer in the mapbox-streets vector source contains building-height
+            // data from OpenStreetMap.
+            // For more, goto:
+            // https://www.mapbox.com/install/
+
+            mapboxgl.accessToken =
+                import.meta.env.VITE_MAPBOX_ACCESS_TOKEN || "";
+            var map = new mapboxgl.Map({
+                style: "mapbox://styles/mapbox/light-v10",
+                center: [90.3911645, 23.7494284], // Longitude, latitude
+                zoom: 18.5, // Zoom level
+                pitch: 45,
+                bearing: -17.6,
+                container: "map", // Our #map target.
+                antialias: true,
+            });
+
+            map.on("load", function () {
+                // Insert the layer beneath any symbol layer.
+                var layers = map.getStyle().layers;
+
+                var labelLayerId;
+                for (var i = 0; i < layers.length; i++) {
+                    if (
+                        layers[i].type === "symbol" &&
+                        layers[i].layout["text-field"]
+                    ) {
+                        labelLayerId = layers[i].id;
+                        break;
+                    }
+                }
+
+                map.addLayer(
+                    {
+                        id: "3d-buildings",
+                        source: "composite",
+                        "source-layer": "building",
+                        filter: ["==", "extrude", "true"],
+                        type: "fill-extrusion",
+                        minzoom: 15,
+                        paint: {
+                            "fill-extrusion-color": "#aaa",
+
+                            // use an 'interpolate' expression to add a smooth transition effect to the
+                            // buildings as the user zooms in
+                            "fill-extrusion-height": [
+                                "interpolate",
+                                ["linear"],
+                                ["zoom"],
+                                15,
+                                0,
+                                15.05,
+                                ["get", "height"],
+                            ],
+                            "fill-extrusion-base": [
+                                "interpolate",
+                                ["linear"],
+                                ["zoom"],
+                                15,
+                                0,
+                                15.05,
+                                ["get", "min_height"],
+                            ],
+                            "fill-extrusion-opacity": 0.6,
+                        },
+                    },
+                    labelLayerId
+                );
+            });
+            function vanillaTilt(element) {
+                VanillaTilt.init(document.querySelector(element), {
+                    max: 10,
+                    speed: 200,
+                    glare: true,
+                    "max-glare": 0.5,
+                });
+            }
+
+            vanillaTilt(".info1");
+            vanillaTilt(".info2");
+            vanillaTilt(".info3");
+
+            document.querySelector("form").addEventListener("submit", (e) => {
+                e.preventDefault();
+            });
+            let form_name = document.getElementById("fname");
+            let email = document.getElementById("email");
+            let subject = document.getElementById("subject");
+            let message = document.getElementById("message");
+            let submit = document.getElementById("submit");
+
+            submit.addEventListener("click", () => {
+                if (
+                    form_name.value == "" &&
+                    email.value == "" &&
+                    subject.value == "" &&
+                    message.value == ""
+                ) {
+                    alert("All fields are required");
+                    return;
+                } else {
+                    submitEmail();
+                }
+            });
+
+            emailjs.init(import.meta.env.VITE_EMAILJS_ACCESS_TOKEN);
+
+            function submitEmail() {
+                let param = {
+                    method: "POST",
+                    from_name: form_name.value,
+                    from_email: email.value,
+                    to_name: "Shuvro!",
+                    subject: subject.value,
+                    message: message.value,
+                };
+
+                emailjs.send("service_name", "template_name", param).then(
+                    function (response) {
+                        alert(
+                            "SUCCESS! " + response.status + " " + response.text
+                        );
+                    },
+                    function (error) {
+                        alert("FAILED... " + error);
+                    }
+                );
+            }
+
+            document.querySelector("form").addEventListener("submit", (e) => {
+                e.preventDefault();
+            });
+        </script>
+
+        <!-----------------LOCAL (MAIN FILE { USED TO ANIMATE WEBPAGE.})----------------->
+        <script defer>
+            const animate1 = anime.timeline({
+                targets: ".circle",
+                loop: true,
+                duration: 2000,
+                direction: "alternate",
+                easing: "easeInOutQuad",
+            });
+            animate1.add({
+                translateX: 350,
+            });
+
+            let dot = document.querySelectorAll(".dot");
+            for (let i = 0; i < dot.length; i++) {
+                const ind = dot[i];
+                const animate2 = anime.timeline({
+                    targets: ind,
+                    loop: true,
+                    direction: "alternate",
+                    delay: i * 100,
+                });
+                animate2.add({
+                    scale: 2,
+                });
+            }
+
+            let span = document.querySelectorAll(".content .text span");
+            const animate3 = anime.timeline({
+                targets: span,
+                easing: "easeInOutExpo",
+                delay: anime.stagger(20, { direction: "reverse" }),
+                direction: "reverse",
+                autoplay: false,
+            });
+
+            animate3.add({
+                rotate: () => {
+                    return anime.random(-360, 360);
+                },
+                translateX: () => {
+                    return anime.random(-500, 500);
+                },
+                translateY: () => {
+                    return anime.random(-500, 500);
+                },
+                duration: 3000,
+            });
+
+            const animate4 = anime({
+                targets: ".button",
+                scale: [0, 1],
+                delay: anime.stagger(200, { start: 7000 }),
+                autoplay: false,
+            });
+
+            const animate5 = anime({
+                targets: [
+                    document.querySelectorAll(".info"),
+                    document.querySelectorAll(".inp_field"),
+                    ".message",
+                    ".submit",
+                ],
+                translateY: [50, 0],
+                rotateX: [90, 0],
+                opacity: [0, 1],
+                delay: anime.stagger(300, { start: 1000 }),
+                duration: 750,
+                autoplay: false,
+                easing: "easeOutQuint",
+            });
+
+            const animate6 = anime({
+                targets: [".services .t_dummy", ".services .hero-text"],
+                duration: 1000,
+                scaleX: [0, 1],
+                delay: anime.stagger(300, { start: 1000 }),
+                autoplay: false,
+            });
+
+            function resize() {
+                if (window.innerWidth <= 632) {
+                    animate5.play();
+                    animate3.play();
+                    animate4.play();
+                    animate6.play();
+                }
+            }
+            resize();
+            window.addEventListener("resize", resize);
+        </script>
+    </body>
+</html>
